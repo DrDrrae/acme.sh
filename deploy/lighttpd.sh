@@ -67,6 +67,7 @@ lighttpd_deploy() {
       return 1
     fi
     if ! cat "$_LIGHTTTPD_conf" >"$_backup_conf"; then
+      _err "Can not backup Lighttpd config to $_backup_conf"
       return 1
     fi
 
